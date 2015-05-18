@@ -41,7 +41,11 @@
         }
 
     #define MQ_LIBRARY_SERVER "mqm"
-    #define MQ_LIBRARY_CLIENT "mqic32"
+    #if defined(_WIN64) //check for x64
+        #define MQ_LIBRARY_CLIENT "mqic"
+    #else
+        #define MQ_LIBRARY_CLIENT "mqic32"
+    #endif
 #elif defined(SOLARIS) || defined(__SVR4) || defined(__linux__) || defined(LINUX)
     /*
      * SOLARIS, LINUX
