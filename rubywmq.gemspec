@@ -1,5 +1,8 @@
 $:.push File.expand_path("../lib", __FILE__)
 
+# Maintain your gem's version:
+require 'wmq/version'
+
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   # Exclude locally compiled files since they are platform specific
@@ -16,8 +19,9 @@ Gem::Specification.new do |spec|
     /nbproject/
   ]
 
+
   spec.name        = 'rubywmq'
-  spec.version     = '2.0.3'
+  spec.version     = WMQ::VERSION
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ['Reid Morrison', 'Edwin Fine', 'Christian Moniatis']
   spec.email       = ['christian.moniatis@gmail.com']
